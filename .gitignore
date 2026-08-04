@@ -1,0 +1,22 @@
+# Simulation output
+build/
+*.vcd
+*.wdb
+*.jou
+*.log
+*.pb
+*.str
+*.xpr
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.srcs/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
