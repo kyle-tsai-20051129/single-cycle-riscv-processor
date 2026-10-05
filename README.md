@@ -35,31 +35,8 @@ docs/CONTRIBUTIONS.md
                       Authorship and supplied-component disclosure
 ```
 
-## Simulation
-
-The original project was verified in Xilinx Vivado. To run the included testbench in Vivado:
-
-1. Create an RTL project and add every file in `rtl/` as a design source.
-2. Add `sim/tb_processor.v` as a simulation source.
-3. Set `tb_processor` as the simulation top.
-4. Run behavioral simulation for at least 430 ns.
-5. Confirm the console reports `The number of correct test cases is: 20`.
-
-An open-source simulator can also be used when Icarus Verilog is installed:
-
-```sh
-mkdir -p build
-iverilog -g2012 -o build/processor_sim rtl/*.v sim/tb_processor.v
-vvp build/processor_sim
-```
-
 ## Verification result
 
 The final integrated simulation executed 20 instructions and passed all 20 automated expected-result checks. The sequence exercises the supported arithmetic, logical, immediate, load, and store paths.
 
-## Academic and attribution note
-
-This repository presents a completed Spring 2025 course project. Some starter components were supplied by the course and are identified in [docs/CONTRIBUTIONS.md](docs/CONTRIBUTIONS.md). The original report, assignment handouts, grading metadata, and personal submission information are intentionally excluded.
-
-Before making this repository public, confirm that public sharing is permitted by the course's academic-integrity policy.
 
