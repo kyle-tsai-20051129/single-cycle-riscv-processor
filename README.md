@@ -26,15 +26,6 @@ A 32-bit single-cycle processor implemented in Verilog as an digital-design proj
 
 The main controller decodes the instruction opcode into register-write, memory, operand-selection, and ALU-operation signals. The ALU controller combines the main controller's `ALUOp` with `funct3` and `funct7` to choose the final ALU operation.
 
-## Repository structure
-
-```text
-rtl/                 Processor RTL modules
-sim/tb_processor.v   Automated course-provided verification testbench
-docs/CONTRIBUTIONS.md
-                      Authorship and supplied-component disclosure
-```
-
 ## Verification result
 
 The final integrated simulation executed 20 instructions and passed all 20 automated expected-result checks. The sequence exercises the supported arithmetic, logical, immediate, load, and store paths.
