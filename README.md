@@ -1,6 +1,6 @@
 # Single-Cycle RISC-V-Style Processor
 
-A 32-bit single-cycle processor implemented in Verilog as an EECS 31L digital-design project. The design integrates the processor datapath and control path required to execute a custom 13-instruction RISC-V-style subset.
+A 32-bit single-cycle processor implemented in Verilog as an digital-design project. The design integrates the processor datapath and control path required to execute a custom 13-instruction RISC-V-style subset.
 
 ## Highlights
 
