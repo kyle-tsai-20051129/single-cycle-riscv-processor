@@ -22,28 +22,7 @@ A 32-bit single-cycle processor implemented in Verilog as an digital-design proj
 | Immediate | `ADDI`, `ANDI`, `ORI`, `NORI`, `SLTI` |
 | Memory | `LW`, `SW` |
 
-`NOR` and `NORI` are course-defined extensions, so this repository is described as RISC-V-style rather than a complete implementation of the RISC-V ISA.
-
 ## Architecture
-
-```mermaid
-flowchart LR
-    PC[Program Counter] --> IM[Instruction Memory]
-    IM --> CTRL[Main Controller]
-    IM --> RF[Register File]
-    IM --> IMM[Immediate Generator]
-    CTRL --> ALUCTRL[ALU Controller]
-    RF --> MUXA[ALU-Source Mux]
-    IMM --> MUXA
-    RF --> ALU[32-bit ALU]
-    MUXA --> ALU
-    ALUCTRL --> ALU
-    ALU --> DM[Data Memory]
-    RF --> DM
-    ALU --> MUXW[Writeback Mux]
-    DM --> MUXW
-    MUXW --> RF
-```
 
 The main controller decodes the instruction opcode into register-write, memory, operand-selection, and ALU-operation signals. The ALU controller combines the main controller's `ALUOp` with `funct3` and `funct7` to choose the final ALU operation.
 
